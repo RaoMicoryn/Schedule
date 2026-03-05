@@ -1,0 +1,73 @@
+.section-label {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 6px;
+  margin-bottom: 12px;
+}
+
+.task-list { display: flex; flex-direction: column; gap: 12px; }
+.task-list__empty { color: #999; font-size: 14px; font-style: italic; padding: 12px 0; }
+
+.task-item {
+  background: #fff;
+  border: 1px solid #e0d8cc;
+  border-left: 4px solid #c9a84c;
+  padding: 14px 16px;
+  transition: box-shadow 0.2s;
+}
+.task-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+/* Priority border colors */
+.task-item--high   { border-left-color: #c0392b; }
+.task-item--medium { border-left-color: #e6a817; }
+.task-item--low    { border-left-color: #1a7a4a; }
+.task-item--done   { border-left-color: #1a7a4a; }
+
+.task-item__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-family: 'Playfair Display', serif;
+}
+.task-item--done .task-item__title {
+  text-decoration: line-through;
+  color: #999;
+}
+.task-item__check { color: #1a7a4a; }
+
+.task-item__tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+
+.tag {
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 2px;
+}
+.tag--category { background: #e8e0d4; color: #555; }
+.tag--deadline { background: #e8f0fe; color: #1a4a9e; }
+
+.task-item__actions { display: flex; gap: 8px; }
+
+.action-btn {
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+.action-btn:hover { opacity: 0.8; }
+
+.action-btn--complete { background: transparent; border: 1.5px solid #1a1a2e; color: #1a1a2e; }
+.action-btn--complete:hover { background: #1a1a2e; color: #f0e6c8; }
+.action-btn--undo     { background: transparent; border: 1.5px solid #1a7a4a; color: #1a7a4a; }
+.action-btn--undo:hover { background: #d4f4e7; }
+.action-btn--delete   { background: transparent; border: 1.5px solid #c0392b; color: #c0392b; }
+.action-btn--delete:hover { background: #fde8e8; }
